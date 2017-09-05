@@ -3,19 +3,18 @@
 class Notes {
 
     constructor () {
+
         Object.defineProperty(this, 'set', {
             configurable: false,
-            enumerable   : false,
+            enumerable: false,
             writable: false,
-            value: function (path, value) {
-                if (!path) return;
-                if (!value) return;
+            value: (path, value) => {
+                if (!path || !value) return;
                 // console.log(`setting ${path} to ${value}`);
 
-                // let callers pass in an array of path segments
                 let segments = getSegments(path);
-
                 let dest = this;
+
                 while (segments.length > 1) {
                     // create any missing paths
                     if (!dest[segments[0]]) dest[segments[0]] = {};
@@ -28,13 +27,13 @@ class Notes {
 
         Object.defineProperty(this, 'get', {
             configurable: false,
-            enumerable   : false,
+            enumerable: false,
             writable: false,
-            value: function (path) {
+            value: (path) => {
                 if (!path) return;
                 // console.log(`getting ${path}`);
                 let segments = getSegments(path);
-                return segments.reduce(function (prev, curr) {
+                return segments.reduce((prev, curr) => {
                     return prev ? prev[curr] : undefined
                 }, this)
             }

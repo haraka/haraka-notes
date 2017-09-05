@@ -1,13 +1,13 @@
 [![Build Status][ci-img]][ci-url]
 [![Windows Build Status][ci-win-img]][ci-win-url]
-[![Code Climate][clim-img]][clim-url]
 [![Greenkeeper badge][gk-img]][gk-url]
+[![Code Climate][clim-img]][clim-url]
 [![Code Coverage][cov-img]][cov-url]
 [![NPM][npm-img]][npm-url]
 
 # haraka-notes
 
-Notes are objects that exist on Haraka connections and transactions. Prior to the release of [haraka-notes](https://github.com/haraka/haraka-notes), notes was just an empty object. Now notes an empty object with two functions:
+Notes are objects that exist on Haraka connections and transactions. Prior to the release of [haraka-notes](https://github.com/haraka/haraka-notes), notes was just an empty object. Now notes is an empty object with two functions:
 
 
 ### set (path, value)
@@ -35,14 +35,8 @@ connection.transaction.notes.get('queue.wants');
 The get and set functions support passing the path as an array of strings. This might be useful to the type of masochist that has dots in their JS/JSON keys. Example:
 
 ```js
-connection.transaction.notes.get(['i','like','pain']);
+connection.transaction.notes.get(['i.do','like','pa.in']);
 ```
-
-
-## Enable Travis-CI testing
-
-- [ ] visit your [Travis-CI profile page](https://travis-ci.org/profile) and enable Continuous Integration testing on the repo
-- [ ] enable Code Climate. Click the _code climate_ badge and import your repo.
 
 
 <!-- leave these buried at the bottom of the document -->
