@@ -1,6 +1,6 @@
 {
   "name": "haraka-notes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Haraka Notes",
   "main": "index.js",
   "scripts": {
