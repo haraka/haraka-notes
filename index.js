@@ -1,8 +1,12 @@
-'use strict';
+'use strict'
 
 class Notes {
 
-    constructor () {
+    constructor (notes) {
+
+        if (notes && typeof notes === 'object') {
+            Object.assign(this, notes)
+        }
 
         Object.defineProperty(this, 'set', {
             configurable: false,
@@ -41,12 +45,12 @@ class Notes {
     }
 }
 
-module.exports = Notes;
+module.exports = Notes
 
 function getSegments (path) {
     // a dot.delimited.path
-    if (typeof path === 'string') return path.split('.');
+    if (typeof path === 'string') return path.split('.')
 
     // ['one', 'two', 'thr.ee']
-    if (Array.isArray(path)) return path;
+    if (Array.isArray(path)) return path
 }
