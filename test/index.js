@@ -78,7 +78,7 @@ describe('notes', () => {
 describe('notes + object', () => {
 
     it('assigns instantiation object', (done) => {
-        let passIn = {
+        const passIn = {
             one: true,
             two: "false",
             three: "floor",
