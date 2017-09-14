@@ -16,7 +16,7 @@ class Notes {
                 if (!path || !value) return;
                 // console.log(`setting ${path} to ${value}`);
 
-                let segments = getSegments(path);
+                const segments = getSegments(path);
                 let dest = this;
 
                 while (segments.length > 1) {
@@ -36,7 +36,7 @@ class Notes {
             value: (path) => {
                 if (!path) return;
                 // console.log(`getting ${path}`);
-                let segments = getSegments(path);
+                const segments = getSegments(path);
                 return segments.reduce((prev, curr) => {
                     return prev ? prev[curr] : undefined
                 }, this)
