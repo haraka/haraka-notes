@@ -7,7 +7,7 @@
     "lint": "node node_modules/.bin/eslint *.js test/*.js",
     "lintfix": "node node_modules/.bin/eslint --fix *.js test/*.js",
     "cover": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-    "test": "node node_modules/.bin/_mocha"
+    "test": "node node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
