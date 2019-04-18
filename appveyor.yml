@@ -14,6 +14,6 @@ before_test:
   - npm --version
 
 test_script:
-  - node node_modules\.bin\_mocha
+  - node_modules\.bin\_mocha
 
 after_test:
