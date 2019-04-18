@@ -14,6 +14,6 @@ before_test:
   - npm --version
 
 test_script:
-  - C:\projects\haraka-notes\node_modules\.bin\mocha
+  - npm test
 
 after_test:
