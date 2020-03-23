@@ -1,13 +1,13 @@
 {
   "name": "haraka-notes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Haraka Notes",
   "main": "index.js",
   "scripts": {
-    "lint": "node_modules/.bin/eslint *.js test/*.js",
-    "lintfix": "node_modules/.bin/eslint --fix *.js test/*.js",
-    "cover": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-    "test": "node_modules/.bin/_mocha"
+    "lint": "npx eslint *.js test/*.js",
+    "lintfix": "npx eslint --fix *.js test/*.js",
+    "cover": "npx istanbul cover npm test",
+    "test": "npx mocha"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/haraka/haraka-notes#readme",
   "devDependencies": {
-    "eslint": ">=4",
+    "eslint": ">=5",
     "eslint-plugin-haraka": "*",
     "mocha": "*"
   }
