@@ -1,6 +1,5 @@
 [![Build Status][ci-img]][ci-url]
 [![Windows Build Status][ci-win-img]][ci-win-url]
-[![Greenkeeper badge][gk-img]][gk-url]
 [![Code Climate][clim-img]][clim-url]
 [![Code Coverage][cov-img]][cov-url]
 [![NPM][npm-img]][npm-url]
@@ -52,7 +51,5 @@ To reduce the likelihood of namespace collisions in Haraka notes, consider regis
 [cov-url]: https://codecov.io/github/haraka/haraka-notes
 [clim-img]: https://codeclimate.com/github/haraka/haraka-notes/badges/gpa.svg
 [clim-url]: https://codeclimate.com/github/haraka/haraka-notes
-[gk-img]: https://badges.greenkeeper.io/haraka/haraka-notes.svg
-[gk-url]: https://greenkeeper.io/
 [npm-img]: https://nodei.co/npm/haraka-notes.png
 [npm-url]: https://www.npmjs.com/package/haraka-notes

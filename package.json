@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npx eslint *.js test/*.js",
     "lintfix": "npx eslint --fix *.js test/*.js",
-    "cover": "npx istanbul cover npm test",
+    "cover": "npx nyc --reporter=lcov npm test",
     "test": "npx mocha"
   },
   "repository": {
