@@ -1,4 +1,10 @@
 
+### 1.0.4 - 2021-MM-DD
+
+- CI: replace Travis & AppVeyor with GitHub actions
+- 
+
+
 ### 1.0.3 - 2020-03-23
 
 - bump packaging versions
