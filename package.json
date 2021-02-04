@@ -1,12 +1,11 @@
 {
   "name": "haraka-notes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Haraka Notes",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint *.js test/*.js",
     "lintfix": "npx eslint --fix *.js test/*.js",
-    "cover": "npx nyc --reporter=lcov npm test",
     "test": "npx mocha"
   },
   "repository": {

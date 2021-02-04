@@ -1,34 +1,32 @@
-on: [ pull_request ]
-
 name: Test Coverage
+
+# on: [ push ]  # use this for non-plugins
+# haraka-plugin-*, dummy event that never triggers
+on: [ milestone ]
 
 jobs:
 
   coverage:
-    name: Codecov
+
     runs-on: ubuntu-latest
 
     steps:
 
-    - uses: actions/checkout@master
-      name: Checkout Code
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
       with:
-        fetch-depth: 1
-
-    - name: Use Node.js 12
-      uses: actions/setup-node@master
-      with:
-        node-version: 12.x
+        node-version: '12'
 
     - name: Install
       run: |
         npm install
         npm install --no-save nyc codecov
 
-    - name: Run Coverage
-      run: npm run cover
+    - run: npx nyc --reporter=lcovonly npm test
+      env:
+        NODE_ENV: cov
 
-    - name: Coveralls
+    - name: Submit to Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.github_token }}

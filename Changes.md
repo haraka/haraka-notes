@@ -1,8 +1,8 @@
 
-### 1.0.4 - 2021-MM-DD
+### 1.0.4 - 2021-02-04
 
 - CI: replace Travis & AppVeyor with GitHub actions
-- 
+- CI: automatically publish upon release.
 
 
 ### 1.0.3 - 2020-03-23
