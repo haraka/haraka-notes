@@ -4,25 +4,33 @@ on: [ push ]
 
 jobs:
 
+  build-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.ci-test.strategy.matrix.node }}
+    steps:
+      - uses: actions/node-js-lts-versions@v1
+
   ci-test:
 
     runs-on: ${{ matrix.os }}
+    needs: build-matrix
 
     strategy:
       matrix:
         os:
           - ubuntu-latest
           - windows-latest
-        node-version:
-          - uses: actions/node-js-lts-versions@v1
+          - macos-latest
+        node: ${{fromJSON(needs.build-matrix.outputs.matrix)}}
       fail-fast: false
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
-      name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
+      name: Node ${{ matrix.node }} on ${{ matrix.os }}
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ matrix.node }}
 
     - run: npm install
     - run: npm test
