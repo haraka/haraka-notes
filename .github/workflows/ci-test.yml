@@ -9,8 +9,7 @@ jobs:
     outputs:
       matrix: ${{ steps.ci-test.strategy.matrix.node }}
     steps:
-    - uses: msimerson/node-lts-versions@v1
-    - run: node dist/index.js
+    - uses: msimerson/node-lts-versions@v1.1
 
   ci-test:
 
