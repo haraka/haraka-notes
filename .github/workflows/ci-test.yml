@@ -9,7 +9,7 @@ jobs:
     outputs:
       matrix: ${{ steps.ci-test.strategy.matrix.node }}
     steps:
-      - uses: actions/node-js-lts-versions@v1
+      - uses: actions/node-lts-versions@v1
 
   ci-test:
 
