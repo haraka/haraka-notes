@@ -9,7 +9,7 @@ jobs:
     outputs:
       supported: ${{ steps.set-matrix.outputs.lts }}
     steps:
-    - uses: msimerson/node-lts-versions@v1.1
+    - uses: msimerson/node-lts-versions@v1.1.1
       id: set-matrix
 
   ci-test:
