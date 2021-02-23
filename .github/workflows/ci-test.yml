@@ -14,9 +14,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node-version:
-          - 10
-          - 12
-          - 14
+          actions/node-js-lts-versions
       fail-fast: false
 
     steps:
