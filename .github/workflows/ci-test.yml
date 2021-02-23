@@ -7,9 +7,10 @@ jobs:
   build-matrix:
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.ci-test.strategy.matrix.node }}
+      supported: ${{ steps.set-matrix.outputs.lts }}
     steps:
     - uses: msimerson/node-lts-versions@v1.1
+      id: set-matrix
 
   ci-test:
 
@@ -22,7 +23,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        # node: ${{fromJSON(needs.build-matrix.outputs.matrix)}}
+        node: ${{ fromJson(needs.build-matrix.outputs.supported) }}
       fail-fast: false
 
     steps:
