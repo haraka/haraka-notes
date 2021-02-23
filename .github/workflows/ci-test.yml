@@ -10,6 +10,8 @@ jobs:
       matrix: ${{ steps.ci-test.strategy.matrix.node }}
     steps:
       - uses: msimerson/node-lts-versions@v1
+    - run: npm install
+    - run: node main.js
 
   ci-test:
 
