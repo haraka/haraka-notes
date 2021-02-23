@@ -13,7 +13,7 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-        node: actions/node-js-lts-versions@v1
+        node-version: actions/node-js-lts-versions@v1
       fail-fast: false
 
     steps:
