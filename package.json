@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/haraka/haraka-notes#readme",
   "devDependencies": {
-    "eslint": "*",
+    "eslint": ">=6",
     "eslint-plugin-haraka": "*",
     "mocha": "*"
   }
