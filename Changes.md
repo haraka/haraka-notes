@@ -1,4 +1,10 @@
 
+### 1.0.5 - 2022-01-26
+
+- make it possible to set a false value
+- CI: bump lowest node.js version to 14
+
+
 ### 1.0.4 - 2021-02-04
 
 - CI: replace Travis & AppVeyor with GitHub actions

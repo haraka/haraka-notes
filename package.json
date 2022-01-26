@@ -1,6 +1,6 @@
 {
   "name": "haraka-notes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Haraka Notes",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/haraka/haraka-notes#readme",
   "devDependencies": {
-    "eslint": ">=6",
+    "eslint": ">=8",
     "eslint-plugin-haraka": "*",
     "mocha": "*"
   }
