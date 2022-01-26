@@ -34,7 +34,7 @@ function getSegments (path) {
 }
 
 function assignPathValue (path, value) {
-    if (!path || !value) return
+    if (path === undefined || value === undefined) return
 
     const segments = getSegments(path)
     let dest = this

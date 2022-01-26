@@ -40,6 +40,12 @@ describe('notes', () => {
         done()
     })
 
+    it('can set a false value', (done) => {
+        this.notes.set('boolean', false)
+        assert.equal(this.notes.boolean, false)
+        done()
+    })
+
     it('gets a top level value', (done) => {
         this.notes.set('foo', 'bar')
         assert.equal(this.notes.get('foo'), 'bar')
