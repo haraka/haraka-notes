@@ -1,11 +1,11 @@
 {
   "name": "haraka-notes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Haraka Notes",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint *.js test/*.js",
-    "lintfix": "npx eslint --fix *.js test/*.js",
+    "lint": "npx eslint *.js test",
+    "lintfix": "npx eslint --fix *.js test",
     "test": "npx mocha"
   },
   "repository": {
@@ -25,6 +25,6 @@
   "devDependencies": {
     "eslint": ">=8",
     "eslint-plugin-haraka": "*",
-    "mocha": "*"
+    "mocha": ">=9"
   }
 }
