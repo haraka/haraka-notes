@@ -1,8 +1,13 @@
 
+### 1.0.6 - 2022-05-27
+
+- chore(ci): depend on shared GHA workflows
+
+
 ### 1.0.5 - 2022-01-26
 
-- make it possible to set a false value
-- CI: bump lowest node.js version to 14
+- feat: make it possible to set a false value
+- chore(ci): bump lowest node.js version to 14
 
 
 ### 1.0.4 - 2021-02-04

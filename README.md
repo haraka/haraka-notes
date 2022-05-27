@@ -1,5 +1,4 @@
 [![Build Status][ci-img]][ci-url]
-[![Windows Build Status][ci-win-img]][ci-win-url]
 [![Code Climate][clim-img]][clim-url]
 [![Code Coverage][cov-img]][cov-url]
 [![NPM][npm-img]][npm-url]
@@ -43,10 +42,8 @@ connection.transaction.notes.get(['i.do','like','pa.in']);
 To reduce the likelihood of namespace collisions in Haraka notes, consider registering the note paths your plugins use [in the registry](https://github.com/haraka/haraka-notes/wiki).
 
 <!-- leave these buried at the bottom of the document -->
-[ci-img]: https://travis-ci.org/haraka/haraka-notes.svg
-[ci-url]: https://travis-ci.org/haraka/haraka-notes
-[ci-win-img]: https://ci.appveyor.com/api/projects/status/lgdkqxv2pdtrsstg?svg=true
-[ci-win-url]: https://ci.appveyor.com/project/haraka/haraka-lgdkqxv2pdtrsstg
+[ci-img]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml
 [cov-img]: https://codecov.io/github/haraka/haraka-notes/coverage.svg
 [cov-url]: https://codecov.io/github/haraka/haraka-notes
 [clim-img]: https://codeclimate.com/github/haraka/haraka-notes/badges/gpa.svg
