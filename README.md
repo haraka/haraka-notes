@@ -41,6 +41,7 @@ connection.transaction.notes.get(['i.do','like','pa.in']);
 
 To reduce the likelihood of namespace collisions in Haraka notes, consider registering the note paths your plugins use [in the registry](https://github.com/haraka/haraka-notes/wiki).
 
+
 <!-- leave these buried at the bottom of the document -->
 [ci-img]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml
