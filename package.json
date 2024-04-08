@@ -1,12 +1,20 @@
 {
   "name": "haraka-notes",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Haraka Notes",
   "main": "index.js",
+  "files": [
+    "CHANGELOG.md"
+  ],
   "scripts": {
-    "lint": "npx eslint *.js test",
-    "lintfix": "npx eslint --fix *.js test",
-    "test": "npx mocha"
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "lint": "npx eslint@^8 *.js test",
+    "lint:fix": "npx eslint@^8 *.js test --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npx prettier . --write --log-level=warn",
+    "test": "npx mocha@10",
+    "versions": "npx @msimerson/dependency-version-checker check",
+    "versions:fix": "npx @msimerson/dependency-version-checker update && npm run prettier:fix"
   },
   "repository": {
     "type": "git",
@@ -23,8 +31,6 @@
   },
   "homepage": "https://github.com/haraka/haraka-notes#readme",
   "devDependencies": {
-    "eslint": "^8.55.0",
-    "eslint-plugin-haraka": "*",
-    "mocha": "^10.2.0"
+    "@haraka/eslint-config": "^1.1.3"
   }
 }
