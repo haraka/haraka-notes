@@ -5,6 +5,3 @@ env:
   es2023: true
 
 extends: ['@haraka']
-
-rules:
-  indent: [2, 4, { SwitchCase: 1 }]
