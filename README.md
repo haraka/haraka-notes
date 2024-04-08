@@ -7,42 +7,38 @@
 
 Notes are objects that exist on Haraka connections and transactions. Prior to the release of [haraka-notes](https://github.com/haraka/haraka-notes), notes was just an empty object. Now notes is an empty object with two functions:
 
-
 ### set (path, value)
 
 Sets a note at a dot delimited path to the specified value. The path can be any number of levels deep and any missing objects in the path are [autovivified](https://en.wikipedia.org/wiki/Autovivification). Perl refugees, contain yourselves.
 
 ```js
-connection.transaction.notes.set('queue.wants', 'smtp_forward');
+connection.transaction.notes.set('queue.wants', 'smtp_forward')
 ```
 
 The above command sets `connection.transaction.notes.queue.wants` to the value 'smtp_forward'.
-
 
 ### get (path)
 
 Fetches the value of a note from a given dot delimited path.
 
 ```js
-connection.transaction.notes.get('queue.wants');
+connection.transaction.notes.get('queue.wants')
 ```
-
 
 ## Array Syntax
 
 The get and set functions support passing the path as an array of strings. This might be useful to the type of masochist that has dots in their JS/JSON keys. Example:
 
 ```js
-connection.transaction.notes.get(['i.do','like','pa.in']);
+connection.transaction.notes.get(['i.do', 'like', 'pa.in'])
 ```
-
 
 ## [Note Path Registry](https://github.com/haraka/haraka-notes/wiki)
 
 To reduce the likelihood of namespace collisions in Haraka notes, consider registering the note paths your plugins use [in the registry](https://github.com/haraka/haraka-notes/wiki).
 
-
 <!-- leave these buried at the bottom of the document -->
+
 [ci-img]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml
 [cov-img]: https://codecov.io/github/haraka/haraka-notes/coverage.svg

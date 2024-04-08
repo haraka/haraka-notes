@@ -1,17 +1,15 @@
-
 const assert = require('assert')
 
-const Notes  = require('../index')
+const Notes = require('../index')
 
 describe('notes', () => {
-
     beforeEach((done) => {
         this.notes = new Notes()
         done()
     })
 
     it('exports an object', (done) => {
-        // console.log(this.notes)
+    // console.log(this.notes)
         assert.ok(typeof this.notes === 'object')
         done()
     })
@@ -82,12 +80,11 @@ describe('notes', () => {
 })
 
 describe('notes + object', () => {
-
     it('assigns instantiation object', (done) => {
         const passIn = {
             one: true,
-            two: "false",
-            three: "floor",
+            two: 'false',
+            three: 'floor',
         }
         this.notes = this.notes = new Notes(passIn)
         assert.deepEqual(this.notes, passIn)
