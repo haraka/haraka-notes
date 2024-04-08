@@ -12,7 +12,7 @@ Notes are objects that exist on Haraka connections and transactions. Prior to th
 Sets a note at a dot delimited path to the specified value. The path can be any number of levels deep and any missing objects in the path are [autovivified](https://en.wikipedia.org/wiki/Autovivification). Perl refugees, contain yourselves.
 
 ```js
-connection.transaction.notes.set("queue.wants", "smtp_forward");
+connection.transaction.notes.set('queue.wants', 'smtp_forward')
 ```
 
 The above command sets `connection.transaction.notes.queue.wants` to the value 'smtp_forward'.
@@ -22,7 +22,7 @@ The above command sets `connection.transaction.notes.queue.wants` to the value '
 Fetches the value of a note from a given dot delimited path.
 
 ```js
-connection.transaction.notes.get("queue.wants");
+connection.transaction.notes.get('queue.wants')
 ```
 
 ## Array Syntax
@@ -30,7 +30,7 @@ connection.transaction.notes.get("queue.wants");
 The get and set functions support passing the path as an array of strings. This might be useful to the type of masochist that has dots in their JS/JSON keys. Example:
 
 ```js
-connection.transaction.notes.get(["i.do", "like", "pa.in"]);
+connection.transaction.notes.get(['i.do', 'like', 'pa.in'])
 ```
 
 ## [Note Path Registry](https://github.com/haraka/haraka-notes/wiki)
