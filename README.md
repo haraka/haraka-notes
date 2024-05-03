@@ -7,9 +7,23 @@
 
 Notes are objects that exist on Haraka connections and transactions. Prior to the release of [haraka-notes](https://github.com/haraka/haraka-notes), notes was just an empty object. Now notes is an empty object with two functions:
 
-### set (path, value)
+## Usage
 
-Sets a note at a dot delimited path to the specified value. The path can be any number of levels deep and any missing objects in the path are [autovivified](https://en.wikipedia.org/wiki/Autovivification). Perl refugees, contain yourselves.
+```js
+const Notes = require('haraka-notes')
+const myNote = new Notes()
+
+myNote.set('some.path', 'a value') // { some: {path: 'a value'}}
+myNote.get('some.path') // 'a value'
+```
+
+### set (path, value, [onlyIfUndefined])
+
+Sets a note at a dot delimited path to the specified value. The path can be any number of levels deep and any missing objects in the path are [autovivified](https://en.wikipedia.org/wiki/Autovivification). Perl afficianados, contain yourselves.
+
+#### set default
+
+If the third set argument is any truthy value, then the property is only set if the current value is undefined. This is useful for applying default values.
 
 ```js
 connection.transaction.notes.set('queue.wants', 'smtp_forward')

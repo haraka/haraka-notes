@@ -3,91 +3,89 @@ const assert = require('assert')
 const Notes = require('../index')
 
 describe('notes', () => {
-    beforeEach((done) => {
-        this.notes = new Notes()
-        done()
-    })
+  beforeEach((done) => {
+    this.notes = new Notes()
+    done()
+  })
 
-    it('exports an object', (done) => {
-    // console.log(this.notes)
-        assert.ok(typeof this.notes === 'object')
-        done()
-    })
+  it('exports an object', () => {
+    assert.ok(typeof this.notes === 'object')
+  })
 
-    const functionList = ['get', 'set']
+  const functionList = ['get', 'set']
 
-    functionList.forEach((fn) => {
-        it(`has ${fn}()`, (done) => {
-            assert.equal(typeof this.notes[fn], 'function')
-            done()
-        })
+  for (const fn of functionList) {
+    it(`has ${fn}()`, () => {
+      assert.equal(typeof this.notes[fn], 'function')
     })
+  }
 
-    functionList.forEach((fn) => {
-        it(`ignores attempts to redefine ${fn}`, (done) => {
-            this.notes[fn] = 'turd'
-            this.notes[fn]('turd')
-            done()
-        })
+  for (const fn of functionList) {
+    it(`ignores attempts to redefine ${fn}`, () => {
+      this.notes[fn] = 'turd'
+      this.notes[fn]('turd')
     })
+  }
 
-    it('sets a top level value', (done) => {
-        this.notes.set('foo', 'bar')
-        // console.log(this.notes)
-        assert.equal(this.notes.foo, 'bar')
-        done()
-    })
+  it('sets a top level value', () => {
+    this.notes.set('foo', 'bar')
+    assert.equal(this.notes.foo, 'bar')
+  })
 
-    it('can set a false value', (done) => {
-        this.notes.set('boolean', false)
-        assert.equal(this.notes.boolean, false)
-        done()
-    })
+  it('can set a false value', () => {
+    this.notes.set('boolean', false)
+    assert.equal(this.notes.boolean, false)
+  })
 
-    it('gets a top level value', (done) => {
-        this.notes.set('foo', 'bar')
-        assert.equal(this.notes.get('foo'), 'bar')
-        done()
-    })
+  it('gets a top level value', () => {
+    this.notes.set('foo', 'bar')
+    assert.equal(this.notes.get('foo'), 'bar')
+  })
 
-    it('sets/gets a second level value', (done) => {
-        this.notes.set('seg1.seg2', 'bar')
-        assert.equal(this.notes.seg1.seg2, 'bar')
-        assert.equal(this.notes.get('seg1.seg2'), 'bar')
-        done()
-    })
+  it('sets/gets a second level value', () => {
+    this.notes.set('seg1.seg2', 'bar')
+    assert.equal(this.notes.seg1.seg2, 'bar')
+    assert.equal(this.notes.get('seg1.seg2'), 'bar')
+  })
 
-    it('sets/gets a three level value', (done) => {
-        this.notes.set('one.two.three', 'floor')
-        assert.equal(this.notes.one.two.three, 'floor')
-        assert.equal(this.notes.get('one.two.three'), 'floor')
-        done()
-    })
+  it('sets/gets a three level value', () => {
+    this.notes.set('one.two.three', 'floor')
+    assert.equal(this.notes.one.two.three, 'floor')
+    assert.equal(this.notes.get('one.two.three'), 'floor')
+  })
 
-    it('supports array syntax', (done) => {
-        this.notes.set(['one', 'two', 'three'], 'floor')
-        assert.equal(this.notes.one.two.three, 'floor')
-        assert.equal(this.notes.get(['one', 'two', 'three']), 'floor')
-        done()
-    })
+  it('supports array syntax', () => {
+    this.notes.set(['one', 'two', 'three'], 'floor')
+    assert.equal(this.notes.one.two.three, 'floor')
+    assert.equal(this.notes.get(['one', 'two', 'three']), 'floor')
+  })
 
-    it('array syntax tolerates dots', (done) => {
-        this.notes.set(['one', 'two', 'three.four'], 'floor')
-        assert.equal(this.notes.one.two['three.four'], 'floor')
-        assert.equal(this.notes.get(['one', 'two', 'three.four']), 'floor')
-        done()
-    })
+  it('array syntax tolerates dots', () => {
+    this.notes.set(['one', 'two', 'three.four'], 'floor')
+    assert.equal(this.notes.one.two['three.four'], 'floor')
+    assert.equal(this.notes.get(['one', 'two', 'three.four']), 'floor')
+  })
+
+  it('sets default sets a property', () => {
+    this.notes.set(['one', 'two'], 'tree', true)
+    assert.equal(this.notes.one.two, 'tree')
+  })
+
+  it('set default does NOT change defined property', () => {
+    this.notes.set('one.two', 'tree', true)
+    this.notes.set('one.two', 'three', true)
+    assert.equal(this.notes.one.two, 'tree')
+  })
 })
 
 describe('notes + object', () => {
-    it('assigns instantiation object', (done) => {
-        const passIn = {
-            one: true,
-            two: 'false',
-            three: 'floor',
-        }
-        this.notes = this.notes = new Notes(passIn)
-        assert.deepEqual(this.notes, passIn)
-        done()
-    })
+  it('assigns instantiation object', () => {
+    const passIn = {
+      one: true,
+      two: 'false',
+      three: 'floor',
+    }
+    this.notes = this.notes = new Notes(passIn)
+    assert.deepEqual(this.notes, passIn)
+  })
 })

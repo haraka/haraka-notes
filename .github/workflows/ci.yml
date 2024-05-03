@@ -2,6 +2,7 @@ name: CI
 
 on:
   push:
+  pull_request:
 
 env:
   CI: true
@@ -21,3 +22,7 @@ jobs:
   windows:
     needs: [lint]
     uses: haraka/.github/.github/workflows/windows.yml@master
+
+  macos:
+    needs: [lint]
+    uses: haraka/.github/.github/workflows/macos.yml@master
