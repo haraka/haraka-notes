@@ -30,7 +30,7 @@ function getSegments(path) {
     if (Array.isArray(path)) return path
 }
 
-function assignPathValue(path, value) {
+function assignPathValue(path, value, onlyWhenUndefined) {
     if (path === undefined || value === undefined) return
 
     const segments = getSegments(path)
@@ -42,7 +42,13 @@ function assignPathValue(path, value) {
         // set dest one path segment deeper
         dest = dest[segments.shift()]
     }
-    dest[segments[0]] = value
+    if (onlyWhenUndefined) {
+        if (dest[segments[0]] === undefined)
+            dest[segments[0]] = value
+    }
+    else {
+        dest[segments[0]] = value
+    }
 }
 
 function getPathValue(path) {

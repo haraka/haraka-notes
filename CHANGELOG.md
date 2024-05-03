@@ -4,6 +4,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Unreleased
 
+### [1.1.0] - 2024-05-03
+
+- set: added 'default' mode. See docs. #
+
 ### [1.0.7] - 2024-04-08
 
 - use `[files]` in package.json. Delete .npmignore.
@@ -42,3 +46,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 [1.0.4]: https://github.com/haraka/haraka-notes/releases/tag/1.0.4
 [1.0.6]: https://github.com/haraka/haraka-notes/releases/tag/1.0.6
 [1.0.7]: https://github.com/haraka/haraka-notes/releases/tag/v1.0.7
+[1.1.0]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.0
