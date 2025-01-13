@@ -1,7 +1,6 @@
 [![Build Status][ci-img]][ci-url]
 [![Code Climate][clim-img]][clim-url]
 [![Code Coverage][cov-img]][cov-url]
-[![NPM][npm-img]][npm-url]
 
 # haraka-notes
 
@@ -59,5 +58,3 @@ To reduce the likelihood of namespace collisions in Haraka notes, consider regis
 [cov-url]: https://codecov.io/github/haraka/haraka-notes
 [clim-img]: https://codeclimate.com/github/haraka/haraka-notes/badges/gpa.svg
 [clim-url]: https://codeclimate.com/github/haraka/haraka-notes
-[npm-img]: https://nodei.co/npm/haraka-notes.png
-[npm-url]: https://www.npmjs.com/package/haraka-notes
