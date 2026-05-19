@@ -16,7 +16,7 @@ myNote.set('some.path', 'a value') // { some: {path: 'a value'}}
 myNote.get('some.path') // 'a value'
 ```
 
-### set (path, value, [onlyIfUndefined])
+### set (path, value, [onlyWhenUndefined])
 
 Sets a note at a dot delimited path to the specified value. The path can be any number of levels deep and any missing objects in the path are [autovivified](https://en.wikipedia.org/wiki/Autovivification). Perl afficianados, contain yourselves.
 
