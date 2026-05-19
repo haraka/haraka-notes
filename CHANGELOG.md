@@ -4,6 +4,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Unreleased
 
+### [1.1.2] - 2026-05-18
+
+- change: test runnner is now node:test
+
 ### [1.1.1] - 2025-01-13
 
 - dep(eslint): upgrade to v9
@@ -52,3 +56,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 [1.0.7]: https://github.com/haraka/haraka-notes/releases/tag/v1.0.7
 [1.1.0]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.0
 [1.1.1]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.1
+[1.1.2]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.2
