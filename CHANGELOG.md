@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Unreleased
 
+### [1.1.3] - 2026-05-19
+
+
+- fix(security): reject `__proto__`/`constructor`/`prototype` path segments to prevent prototype pollution
+- fix: warn (was silent) when overwriting a falsy intermediate value
+- fix: clone array path arguments so callers' arrays are not mutated
+- fix: throw a descriptive `TypeError` for non-string/array paths
+- doc: README `onlyIfUndefined` → `onlyWhenUndefined`
+
 ### [1.1.2] - 2026-05-18
 
 - change: test runnner is now node:test
@@ -57,3 +66,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 [1.1.0]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.0
 [1.1.1]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.1
 [1.1.2]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.2
+[1.1.3]: https://github.com/haraka/haraka-notes/releases/tag/v1.1.3
