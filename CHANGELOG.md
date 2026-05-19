@@ -6,18 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### [1.1.2] - 2026-05-18
 
-#### Added
-
-- 
-
-#### Fixed
-
-- 
-
-#### Changed
-
-- 
-
+- change: test runnner is now node:test
 
 ### [1.1.1] - 2025-01-13
 
