@@ -6,9 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### [1.1.3] - 2026-05-19
 
-
-- fix(security): reject `__proto__`/`constructor`/`prototype` path segments to prevent prototype pollution
-- fix: warn (was silent) when overwriting a falsy intermediate value
+- fix(security): reject prototype path segments to prevent prototype pollution
+- fix: warn when overwriting a falsy intermediate value
 - fix: clone array path arguments so callers' arrays are not mutated
 - fix: throw a descriptive `TypeError` for non-string/array paths
 - doc: README `onlyIfUndefined` → `onlyWhenUndefined`
