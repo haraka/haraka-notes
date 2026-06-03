@@ -56,5 +56,5 @@ To reduce the likelihood of namespace collisions in Haraka notes, consider regis
 [ci-url]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml
 [cov-img]: https://codecov.io/github/haraka/haraka-notes/coverage.svg
 [cov-url]: https://codecov.io/github/haraka/haraka-notes
-[clim-img]: https://codeclimate.com/github/haraka/haraka-notes/badges/gpa.svg
-[clim-url]: https://codeclimate.com/github/haraka/haraka-notes
+[clim-img]: https://qlty.sh/gh/haraka/projects/haraka-notes/maintainability.svg
+[clim-url]: https://qlty.sh/gh/haraka/projects/haraka-notes
