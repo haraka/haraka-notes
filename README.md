@@ -1,8 +1,6 @@
-[![Build Status][ci-img]][ci-url]
-[![Code Climate][clim-img]][clim-url]
-[![Code Coverage][cov-img]][cov-url]
-
 # haraka-notes
+
+[![Build][ci-img]][ci-url] [![Qlty][qlty-img]][qlty-url] [![Cover][cov-img]][cov-url]
 
 Notes are objects that exist on Haraka connections and transactions. Prior to the release of [haraka-notes](https://github.com/haraka/haraka-notes), notes was just an empty object. Now notes is an empty object with two functions:
 
@@ -56,5 +54,5 @@ To reduce the likelihood of namespace collisions in Haraka notes, consider regis
 [ci-url]: https://github.com/haraka/haraka-notes/actions/workflows/ci.yml
 [cov-img]: https://codecov.io/github/haraka/haraka-notes/coverage.svg
 [cov-url]: https://codecov.io/github/haraka/haraka-notes
-[clim-img]: https://qlty.sh/gh/haraka/projects/haraka-notes/maintainability.svg
-[clim-url]: https://qlty.sh/gh/haraka/projects/haraka-notes
+[qlty-img]: https://qlty.sh/gh/haraka/projects/haraka-notes/maintainability.svg
+[qlty-url]: https://qlty.sh/gh/haraka/projects/haraka-notes
